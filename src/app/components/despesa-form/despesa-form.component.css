@@ -1,0 +1,15 @@
+@import "../../../styles.css";
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+button {
+  background: var(--primary700);
+  margin-top: 15px;
+}

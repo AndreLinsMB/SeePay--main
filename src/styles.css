@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(var(--primary700), var(--primary900));
+  color: var(--primary150);
+  min-height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:root {
+  --primary100: #effffd;
+  --primary150: #e1eeeb;
+  --primary200: #d1f0ec;
+  --primary300: #4df0f8;
+  --primary400: #4df8df;
+  --primary500: #54a399;
+  --primary600: #3c8379;
+  --primary700: #186a5e;
+  --primary800: #192f2b;
+  --primary900: #053339;
+  --secondary100: #221c18;
+  --secondary200: #23222266;
+  --secondary300: #23222299;
+  --error100: #f9beda;
+  --error500: #c30b64;
+  color:  #0EA47A;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

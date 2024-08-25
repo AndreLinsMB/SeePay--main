@@ -1,0 +1,44 @@
+@import "../../styles.css";
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background: var(--primary700);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--primary900);
+}
+
+.mat-sidenav-content {
+  background: radial-gradient(var(--primary700), var(--primary900));
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.icons {
+  vertical-align: middle;
+  padding-left: 3px;
+}
+
+h1 {
+  font-family: "Handjet", monospace !important;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary100) !important;
+  text-shadow: 0 0 4px var(--secondary200) !important;
+  font-size: 2rem !important;
+  margin: 0;
+}

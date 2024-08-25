@@ -1,0 +1,22 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Despesas</h1>
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <!--Charts-->
+    <mat-grid-tile
+      *ngFor="let i of [1]"
+      [colspan]="(cardLayout | async)?.chart?.cols"
+      [rowspan]="(cardLayout | async)?.chart?.rows"
+    >
+      <app-card title="Cadastro de Despesas">
+        <div><app-despesa-form></app-despesa-form></div>
+      </app-card>
+    </mat-grid-tile>
+    <!--Table-->
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.table?.cols"
+      [rowspan]="(cardLayout | async)?.table?.rows"
+    >
+      <app-card title="Tabela"><div>Conteúdo da Tabela Aqui</div></app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

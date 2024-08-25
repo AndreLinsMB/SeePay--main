@@ -1,0 +1,77 @@
+<div class="form-container">
+    <header>
+        <h1>See Pay</h1>
+        <img src="../../../assets/icondinheiro.png" alt="money">
+    </header>
+    <section id="user">
+        <h2>Cadastre-se agora</h2>
+        <form [formGroup]="form" (ngSubmit)="cadastro()">
+            <input
+                type="nome"
+                placeholder="Digite seu nome"
+                formControlName="nome"
+                required
+                [ngClass]="{
+          'input-invalid':
+            form.get('nome')!.touched && form.get('nome')!.hasError('required')
+        }"
+            />
+            <div *ngIf="form.controls['nome'].touched" class="invalid-text">
+              <div *ngIf="form.controls['nome'].errors?.['required']">
+                Nome é obrigatório.
+              </div>
+            </div>
+
+            <input
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            required
+            email
+            [ngClass]="{
+              'input-invalid':
+                (form.get('email')!.touched &&
+                  form.get('email')!.hasError('required')) ||
+                (form.get('email')!.touched && form.get('email')!.hasError('email'))
+            }"
+          />
+          <div *ngIf="form.controls['email'].touched" class="invalid-text">
+            <div *ngIf="form.controls['email'].errors?.['required']">
+              Email é obrigatório.
+            </div>
+            <div *ngIf="form.controls['email'].errors?.['email']">
+              Digite um email válido.
+            </div>
+          </div>
+            <input
+            type="password"
+            placeholder="Senha"
+            formControlName="password"
+            required
+            minlength="6"
+            [ngClass]="{
+              'input-invalid':
+               (form.get('password')!.touched &&
+                form.get('password')!.hasError('required')) ||
+                 (form.get('password')!.touched &&
+                form.get('password')!.hasError('minlength'))
+           }"
+            >
+            <div *ngIf="form.controls['password'].touched" class="invalid-text">
+              <div *ngIf="form.controls['password'].errors?.['required']">
+                Senha é obrigatório.
+              </div>
+              <div *ngIf="form.controls['password'].errors?.['minlength']">
+                A senha deve ter no mínimo 6 caracteres.
+              </div>
+            </div>
+            <button [disabled]="!form.valid">Cadastrar</button>
+            <p>
+                Já é cadastrado?
+                <a routerLink="/login">
+                    <strong>Faça login</strong>
+                </a>
+            </p>
+        </form>
+    </section>
+</div>
